@@ -339,14 +339,7 @@ Một attack thực tế là gọi lại `withdrawAtMaturity` trong quá trình 
 
 **Bằng chứng trong code:** `SavingCore.sol:151`, `182`, `203`, `232`, `273` dùng `nonReentrant`; status được cập nhật trước external call ở `197-200`, `221-229`, `267-270` và `293-310`. Test suite bao phủ pause, unauthorized calls, repeated withdrawal và các nhánh lỗi liên quan.
 
-## 11. Giới hạn hiện tại
-
-- `MockUSDC` chỉ phục vụ test và demo.
-- Auto-renew trên Sepolia cần chờ maturity/grace period thực tế.
-- `totalCommittedInterest` hiện phục vụ accounting; `VaultManager.withdrawFunds` chưa giới hạn admin chỉ được rút phần surplus. Đây là hướng mở rộng cho phiên bản sau.
-- Chưa triển khai partial withdrawal, top-up deposit hoặc delayed-interest claim.
-
-## 12. Cấu trúc repository
+## 11. Cấu trúc repository
 
 ```text
 backend/
