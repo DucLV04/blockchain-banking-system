@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+**/node_modules/
+
+# Build and generated output
+**/dist/
+**/coverage/
+**/artifacts/
+**/cache/
+**/typechain/
+**/typechain-types/
+**/*.tsbuildinfo
+**/coverage.json
+**/test/report.html
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Logs and local tooling
+*.log
+.vscode/
+.idea/

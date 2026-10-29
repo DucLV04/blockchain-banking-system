@@ -1,0 +1,61 @@
+{
+  "name": "my-hardhat-template",
+  "version": "1.0.0",
+  "description": "Hardhat template cho Smart Contract development",
+  "main": "hardhat.config.ts",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "clean": "hardhat clean",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=1 hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy-all.js --network hardhat",
+    "deploy:sepolia": "npx hardhat run scripts/deploy-all.js --network sepolia",
+    "deploy:mainnet": "npx hardhat run scripts/deploy-all.js --network ethereum",
+    "node": "hardhat node",
+    "size": "hardhat size-contracts",
+    "accounts": "hardhat accounts",
+    "typechain": "hardhat typechain",
+    "verify": "hardhat verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/contracts-upgradeable": "^5.3.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.25.0",
+    "hardhat-abi-exporter": "^2.10.1",
+    "hardhat-contract-sizer": "^2.9.0",
+    "hardhat-deploy": "^1.0.1",
+    "hardhat-deploy-ethers": "^0.4.2",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.17",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.2",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "useTabs": false
+  }
+}
